@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling for the traffic light */
+    .traffic-light {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .light {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .red { background-color: red; }
+    .yellow { background-color: yellow; }
+    .green { background-color: green; }
+  </style>
+</head>
+<body>
+
+<div class="traffic-light">
+  <div id="red" class="light red"></div>
+  <div id="yellow" class="light yellow"></div>
+  <div id="green" class="light green"></div>
+</div>
+
+<script>
+  // Function to toggle the lights based on the traffic light state
+  function toggleLights(state) {
+    // Reset all lights to their default state
+    document.getElementById('red').style.backgroundColor = 'red';
+    document.getElementById('yellow').style.backgroundColor = 'yellow';
+    document.getElementById('green').style.backgroundColor = 'green';
+
+    // Set the active light based on the current state
+    switch (state) {
+      case 'red':
+        document.getElementById('red').style.backgroundColor = 'darkred';
+        break;
+      case 'yellow':
+        document.getElementById('yellow').style.backgroundColor = 'darkgoldenrod';
+        break;
+      case 'green':
+        document.getElementById('green').style.backgroundColor = 'darkgreen';
+        break;
+    }
+  }
+
+  // Function to control the traffic light countdown
+  function startTrafficLightCountdown() {
+    // Initial state
+    let currentState = 'green';
+    toggleLights(currentState);
+
+    // Set interval for the countdown
+    const countdownInterval = setInterval(() => {
+      switch (currentState) {
+        case 'green':
+          currentState = 'yellow';
+          break;
+        case 'yellow':
+          currentState = 'red';
+          break;
+        case 'red':
+          currentState = 'green';
+          break;
+      }
+
+      // Update the lights based on the new state
+      toggleLights(currentState);
+
+      // Stop the countdown after a certain number of iterations
+      if (currentState === 'red') {
+        clearInterval(countdownInterval);
+      }
+    }, 2000); // Change the interval (in milliseconds) as needed
+  }
+
+  // Start the traffic light countdown when the page loads
+  window.onload = startTrafficLightCountdown;
+</script>
+
+</body>
+</html>
