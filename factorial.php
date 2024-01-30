@@ -1,6 +1,8 @@
 <?php
 $b = $_POST['end'];
-$f=1;
+
+function fact(int $b){
+    $f=1;   
 if ($b<0) {
     echo "No factorial for negative number";
 }else {
@@ -9,5 +11,7 @@ if ($b<0) {
     }
     echo $f;
 }
+}
+echo fact($b);
 
 ?>
