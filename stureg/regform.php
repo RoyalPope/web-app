@@ -58,7 +58,22 @@
 </head>
 <body>
     <form action="run.php" method="post">
-        First Name: <input type="text" name="fname" required><br><br> 
+        First Name: <select name="fname">
+            <option value="">
+                <?php
+                include ("conn.php");
+
+                $fetch = "SELECT fname from student";
+                $sql = mysqli_query($conn,$fetch);
+
+                while ($row = mysqli_fetch_assoc($sql)) {
+                    ?>
+                    <option value=""><?php echo $row['fname']?></option>
+                    <?php
+                }
+                ?>
+            </option>
+        </select> 
         Last Name: <input type="text" name="lname" required><br><br>
         Birth date: <input type="date" name="date" required><br><br>
         District: <select name="dropdown" >
