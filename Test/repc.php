@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    body {
+            body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     }
@@ -41,9 +41,6 @@
   background-color: #f0f0f0;
     }
 
-    input[type="text"],
-    input[type="number"],
-    input[type="date"],
     input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -69,29 +66,26 @@
 </head>
 <body>
     <?php
-    include ("home.html");
+    include("home.html");
     ?>
-    <form action="proini.php" method="post">
-        <h1>PROD. IN</h1>
-        Product: <select name="product">
+    <form action="repc1.php" method="post">
+        <h1>Search By Customer</h1>
+        Select Customer: <select name="customer">
             <option value="">
                 <?php
                 include ("conn.php");
 
-                $fetch = "SELECT ProductCode,ProductName from product";
+                $fetch = "SELECT customer_id,Fname,Lname from customer";
                 $sql = mysqli_query($conn,$fetch);
 
                 while($row = mysqli_fetch_assoc($sql)){
-                    ?>
-                    <option value="<?php echo $row['ProductCode']?>"><?php echo $row['ProductName']?></option>
-                    <?php
+                ?>
+                <option value="<?php echo $row['customer_id']?>"><?php echo $row['Fname'];echo " ".$row['Lname']?></option>
+                <?php
                 }
                 ?>
             </option>
         </select><br><br>
-        Date: <input type="date" name="date"><br><br>
-        Quantity: <input type="text" name="qty">
-        Unit Price: <input type="number" name="cost">
         <input type="submit" value="Submit">
     </form>
 </body>

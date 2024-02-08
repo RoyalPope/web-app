@@ -44,6 +44,7 @@
 
     input[type="text"],
     input[type="number"],
+    input[type="date"],
     input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -70,7 +71,7 @@
 </head>
 <body>
     <?php
-    include ("index.html");
+    include ("home.html");
     ?>
     <form action="proouti.php" method="post">
         <h1>PROD. OUT</h1>
@@ -90,6 +91,7 @@
                 ?>
             </option>
         </select><br><br>
+        Date: <input type="date" name="date"><br><br>
         Quantity: <input type="text" name="qty">
         Unit Price: <input type="number" name="cost">
         Customer: <select name="customer">

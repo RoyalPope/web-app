@@ -5,8 +5,9 @@ $pro = $_POST['product'];
 $qty = $_POST['qty'];
 $price = $_POST['cost'];
 $cust = $_POST['customer'];
+$date = $_POST['date'];
 
-$insert = "INSERT into productout (ProductCode,quantity,UnitPrice,customer_id) values ('$pro','$qty','$price','$cust')";
+$insert = "INSERT into productout (ProductCode,date,quantity,UnitPrice,customer_id) values ('$pro','$date','$qty','$price','$cust')";
 $sql = mysqli_query($conn,$insert);
 
 if($sql){

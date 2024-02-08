@@ -32,7 +32,7 @@
         </tr>
         <?php
         include ("conn.php");
-        include ("index.html");
+        include ("home.html");
 
         $fetch = "SELECT Fname,Lname,Age,Phone,Location from customer";
         $sql = mysqli_query($conn,$fetch);

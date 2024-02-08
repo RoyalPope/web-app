@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ul {
-  list-style-type: none;
+<style>
+     * {
   margin: 0;
+  padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+ul {
+  list-style-type: none;
+  margin: 0 auto;
   padding: 0;
   background-color: #723b83;
   overflow: hidden;
+  display: table; 
+  width: 100%;
+  text-align: center;
 }
 
 li {
-  float: left;
+  display: inline-block;
 }
 
 li a {
@@ -36,14 +43,18 @@ li a:hover {
     </style>
 </head>
 <body>
+  
     <ul>
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="home.html">HOME</a></li>
         <li><a href="customer.php">CUSTOMER</a></li>
         <li><a href="product2.php">PRODUCT</a></li>
         <li><a href="proin.php">Prod.IN</a></li>
         <li><a href="proout.php">Prod.OUT</a></li>
         <li><a href="displayc.php">Display Customer</a></li>
         <li><a href="displaypro.php">Display Product</a></li>
+        <li><a href="reportf.php">Search By Date</a></li>
+        <li><a href="repc.php">Search By Customer</a></li>
+        <li><a href="index.php">Log Out</a></li>
     </ul>
 </body>
 </html>
