@@ -23,6 +23,23 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+  select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+    }
+
+    select option {
+  font-size: 16px;
+    }
+
+    select option:checked {
+  background-color: #f0f0f0;
+    }
   
   input[type="date"],
   input[type="submit"] {
@@ -54,7 +71,23 @@
   ?>
     <form action="report1.php" method="post">
         <h1>Search By Date</h1>
-        Start Date: <input type="date" name="start">
+        Product: <select name="product">
+          <option value="">
+            <?php
+            include("conn.php");
+
+            $fetch = "SELECT ProductCode,ProductName from product";
+            $sql = mysqli_query($conn,$fetch);
+
+            while($row = mysqli_fetch_assoc($sql)){
+            ?>
+            <option value="<?php echo $row['ProductCode']?>"><?php echo $row['ProductName']?></option>
+            <?php
+            }
+            ?>
+          </option>
+        </select><br><br>
+        Start Date: <input type="date" max="<?php echo date('Y-m-d')?>" name="start">
         End Date: <input type="date" name="end">
         <input type="submit" value="Submit">
     </form>

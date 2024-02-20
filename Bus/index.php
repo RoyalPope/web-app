@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
+    <style>
       body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 form {
@@ -16,7 +16,8 @@ form {
   padding: 40px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 130px;
+  box-shadow: 0 0 10px black;
 }
 
 h1 {
@@ -36,7 +37,7 @@ input[type="submit"] {
 }
 
 input[type="submit"] {
-  background-color: #874caf;
+    background-color: #28c4aa;
   color: white;
   border: none;
   cursor: pointer;
@@ -44,16 +45,16 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #7845a0;
+    background-color: #411a4d;
   transform: scale(1.05);
 }
     </style>
 </head>
 <body>
-    <form action="login.php" method="post">
-        <h1>LOG IN</h1>
-        Username: <input type="text" name="username">
-        Password: <input type="password" name="pass">
+    <form action="log.php" method="post">
+        <h1>Log IN</h1>
+        Username: <input type="text" name="usname">
+        Password: <input type="password" name="passw">
         <input type="submit" value="submit">
     </form>
 </body>
