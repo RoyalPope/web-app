@@ -92,7 +92,7 @@
             </option>
         </select><br><br>
         Date: <input type="date" name="date"><br><br>
-        Quantity: <input type="text" name="qty">
+        Quantity: <input type="number" name="qty">
         Unit Price: <input type="number" name="cost">
         Customer: <select name="customer">
                 <option value="">
