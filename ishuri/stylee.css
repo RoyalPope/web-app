@@ -34,6 +34,8 @@ input{
     border-radius: 5px;
     outline: none;
     border: 2px solid #facb90;
+    border-top: none;
+    /* border-right: none; */
     width: 300px;
     padding: 10px;
 }
@@ -63,4 +65,27 @@ select{
     border-radius: 5px;
     width: 300px;
     padding: 10px;
+    border-top: none;
+    /* border-right: none; */
+}
+.ser input{
+    width: 20%;
+    transition: 0.5s;
+}
+.ser input:focus-visible{
+    width: 40%;
+}
+table{
+    
+    margin: 0 auto;
+    width: 50%;
+    border: none;
+}
+td,th{
+    border: none;
+    padding: 5px;
+    border: 1px solid #facb90;
+}
+th{
+    background-color: #facb90;
 }
