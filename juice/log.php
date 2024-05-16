@@ -13,11 +13,13 @@ if(mysqli_num_rows($run)>0){
     while($row=mysqli_fetch_assoc($run)){
 
     if($row['userType']=='owner'){
+        $_SESSION['user']=$uname;
         echo "<script>
         alert('Welcome Owner');
         window.location.href='owner.php';
-    </script>";
+        </script>";
     }elseif($row['userType']=='worker'){
+        $_SESSION['user']=$uname;
         echo "<script>
         alert('Welcome Worker');
         window.location.href='worker.php';
