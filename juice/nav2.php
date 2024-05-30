@@ -12,11 +12,6 @@
         <h1>Juice Depot</h1>
     </div>
     <div class="links">
-        <a href="product.php">Products</a>
-        <a href="stock.php">Stock In</a>
-        <a href="customer.php">customer</a>
-        <a href="payments.php">Pays</a>
-        <a href="dsales.php">sales</a>
         <a href="zend.php">Log Out</a>
     </div>
     </div>

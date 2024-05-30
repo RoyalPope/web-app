@@ -9,6 +9,9 @@ include('astart.php');
     <title>Document</title>
 </head>
 <body>
+<?php
+    include('nav.php');
+    ?>
     <table border=1>
         <tr>
             <th>No</th>

@@ -5,10 +5,14 @@ include('astart.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylee.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include('nav.php');
+    ?>
     <table border=1>
     <tr>
         <th>No</th>
@@ -38,6 +42,7 @@ include('astart.php');
     }
     ?>
     <tr>
+        
         <td colspan="5"><a href="newc.php"><button>&plus; Add Customer</button></a></td>
     </tr>
     </table>

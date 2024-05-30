@@ -5,11 +5,16 @@ include('astart.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylee.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include('nav2.php')
+    ?>
     <form action="sales.php" method="post">
+        <h1>Record sales</h1>
         Product:<select name="pid" id="">
             <?php
             include('conn.php');
@@ -23,7 +28,7 @@ include('astart.php');
                 <?php
             }
             ?>
-        </select>
+        </select><br><br>
         Customer: <select name="cid" id="">
             <?php
 
@@ -36,10 +41,10 @@ include('astart.php');
                 <?php
             }
             ?>
-        </select>
-        Quantity: <input type="number" name="qty">
-        Date: <input type="date" name="date">
-        Price: <input type="number" name="price">
+        </select><br><br>
+        Quantity: <input type="number" name="qty"><br><br>
+        Date: <input type="date" name="date"><br><br>
+        Price: <input type="number" name="price"><br><br>
         <input type="submit" value="submit">
     </form>
 </body>

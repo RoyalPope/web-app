@@ -5,10 +5,14 @@ include('astart.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylee.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+<?php
+    include('nav.php');
+    ?>
     <?php
     include('conn.php');
 
@@ -20,9 +24,10 @@ include('astart.php');
     
     ?>
 <form action="" method="post">
-            Product Name: <input type="text" name="pname" value="<?=$row['pname']?>">
-            Buy Price: <input type="number" name="bprice" value="<?=$row['bprice']?>">
-            Sell Price: <input type="number" name="sprice" value="<?=$row['sprice']?>">
+    <h1>Update Product</h1>
+            Product Name: <input type="text" name="pname" value="<?=$row['pname']?>"><br><br>
+            Buy Price: <input type="number" name="bprice" value="<?=$row['bprice']?>"><br><br>
+            Sell Price: <input type="number" name="sprice" value="<?=$row['sprice']?>"><br><br>
             <input type="submit" value="Submit" name="submit">
     </form>
     <?php

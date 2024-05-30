@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+form{
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 3px solid rgb(0, 87, 104);
+    border-radius: 15px;
+    width: 40%;
+    text-align: center;
+    padding: 30px;
+    transition: .5s;
+}
+form .inputs{
+    margin: 20px 0;
+}
+input,select{
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid rgb(0, 87, 104);
+    border-radius: 10px;
+    outline: none;
+    transition: .5s;
+    font-weight: bold;
+}
+input[type='submit']:hover{
+    width: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(0, 87, 104);
+}
+.nav h1{
+    font-family: 'lucida handwriting';
+    color: white;
+}
+.nav .links{
+    display: flex;
+    column-gap: 10px;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+    font-weight: bold;
+}
+.links a:hover{
+    color: black;
+    transition: .5s;
+}
+table{
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+
+}
+td,th{
+    padding: 10px;
+    border: none;
+}
+th{
+    background-color: rgb(0, 87, 104);
+}
+td{
+    text-align: center;
+    border-bottom: 2px solid rgb(0, 87, 104);
+    border-radius: 7px;
+}
+button{
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid rgb(0, 87, 104);
+    border-radius: 10px;
+    outline: none;
+    transition: .5s;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+    width: 60%;
+    transition: .5s;
+}

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('conn.php');
 
 $uname = $_POST['uname'];
