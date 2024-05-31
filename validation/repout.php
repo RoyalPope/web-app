@@ -18,20 +18,28 @@ if($_SESSION['type'] != 'manager'){
     <?php
     include('nav.php');
     ?>
+    <form action="" method="post">
+        start: <input type="datetime-local" name='start'>
+        end: <input type="datetime-local" name='end'>
+        <input type="submit" value="submit" name="run">
+    </form>
+    <?php
+    if(isset($_POST['run'])){
+    ?>
     <table border=1 cellspacing=0>
         <tr>
         <th>No</th>
         <th>Product</th>
         <th>Quantity</th>
         <th>Date</th>
-        <th>Action</th>
         </tr>
         <?php
         include('xonn.php');
-
+        $start = $_POST['start'];
+        $end = $_POST['end'];
         $n = 0;
-        $select = "SELECT stockin.inId, product.pid, product.pname, stockin.quantity, stockin.date from stockin 
-        inner join product on stockin.pid=product.pid";
+        $select = "SELECT stockout.outId, product.pid, product.pname, stockout.quantity, stockout.date from stockout 
+        inner join product on stockout.pid=product.pid where stockout.date between '$start'and'$end'";
         $sql = mysqli_query($xonn,$select);
 
         while($row = mysqli_fetch_assoc($sql)){
@@ -42,10 +50,6 @@ if($_SESSION['type'] != 'manager'){
                 <td><?= $row['pname']?></td>
                 <td><?= $row['quantity']?></td>
                 <td><?= $row['date']?></td>
-                <td>
-                    <a href="delete.php?id='<?=$row['inId']?>'">DELETE</a>
-                    <a href="upro.php?id='<?=$row['inId']?>'">UPDATE</a>
-                </td>
 
             </tr>
             <?php
@@ -54,5 +58,10 @@ if($_SESSION['type'] != 'manager'){
         
         ?>
     </table>
+    <?php
+    }else{
+        echo "";
+    }
+    ?>
 </body>
 </html>

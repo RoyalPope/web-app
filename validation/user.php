@@ -15,6 +15,9 @@ if($_SESSION['type'] != 'manager'){
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include('nav.php');
+    ?>
     <form action="new.php" method="post">
         NAMES: <input type="text" name="name"><br><br>
         USERNAME: <input type="text" name="uname"><br><br>

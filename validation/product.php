@@ -18,7 +18,6 @@ if($_SESSION['type'] != 'manager'){
 <?php
     include('nav.php');
     ?>
-    <a href="out.php">log out</a>
     <form action="inpro.php" method="post">
         Pname : <input type="text" name="pname">
         <input type="submit" value="submit">

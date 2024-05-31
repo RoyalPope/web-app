@@ -15,7 +15,6 @@ if($_SESSION['type'] != 'cashier'){
     <title>Document</title>
 </head>
 <body>
-<a href="out.php">log out</a>
     <form action="istou.php" method="post">
         <h1>Stock Out</h1>
         Product: <select name="pid" id="">

@@ -18,7 +18,6 @@ if($_SESSION['type'] != 'manager'){
     <?php
     include('nav.php');
     ?>
-    <a href="out.php">Log Out</a>
     <form action="istoi.php" method="post">
         <h1>Stock In</h1>
         Product: <select name="pid" id="">
