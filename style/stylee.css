@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+form{
+    border-top: 3px solid rgb(222, 0, 200);
+    border-bottom: 3px solid rgb(222, 0, 200);
+    width: 40%;
+    margin: 10% auto;
+    text-align: center;
+    padding: 7px;
+    border-radius: 9px;
+}
+.head h1{
+    color: blue;
+}
+.head p{
+    color: red;
+}
+input{
+    border: none;
+    border: 2px solid rgb(222, 0, 200);
+    outline: none;
+    padding: 5px;
+    margin: 4px;
+    width: 40%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+select{
+    border: none;
+    border: 2px solid rgb(222, 0, 200);
+    outline: none;
+    padding: 5px;
+    margin: 4px;
+    width: 43%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+input[type='submit']{
+    font-weight: bold;
+    border-top: none;
+    border-radius: 8px;
+    transition: .5s;
+    }
+input[type='submit']:hover{
+        cursor: pointer;
+        /* color: white; */
+        background-color: red;
+        /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.689); */
+        width: 50%;
+
+}
+.nav{
+    display: block;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+    /* border: 1px solid red; */
+    width: 20%;
+    height: 100vh;
+}
+.links a{
+    padding: 15px;
+    display: block;
+    /* border: 1px solid red; */
+    margin: 20% 15px;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    transition: .5s;
+    }
+    .links a:hover{
+    background-color: rgb(164, 164, 164);
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.466);
+}
+.title h1{
+    /* border: 1px solid red; */
+    width: fit-content;
+    font-family: 'lucida handwriting';
+    font-size: 30;
+    margin: 0 auto;
+    padding-top: 15px;
+    color: rebeccapurple;
+}

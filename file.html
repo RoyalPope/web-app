@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK</title>
+    <style>
+        body {
+          background-color: #f0f0f0;
+          font-family: Arial, sans-serif;
+        }
+    
+        form {
+          background-color: grey;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 3px dashed aqua;
+          border-radius: 5px;
+          display: flex;
+          justify-content: space-between; /* Create two columns */
+        }
+    
+        .form-column {
+          width: 48%; /* Adjust width for spacing between columns */
+        }
+    
+        h1 {
+          color: aliceblue;
+        }
+    
+        label {
+          display: block;
+          color: aqua;
+          margin-top: 10px;
+        }
+    
+        input {
+          width: 100%;
+          padding: 5px;
+          margin: 5px 0;
+          border: 1px solid #ddd;
+          border-radius: 3px;
+        }
+    
+        input[type="submit"] {
+          background-color: aqua;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: aqua;
+        }
+        label[for]:after {
+      content: " *";
+      color: red;
+    }
+      </style>
+</head>
+<body>
+    <form action="file.php" method="post">
+        <div class="form-column">
+        <h1>Question 1</h1>
+            <label for="Number 1">Number 1</label>
+            <input type="text" id="in1" name="in1" required>
+            
+            <br><br>
+            
+            <label for="Number 2">Number 2</label>
+            <input type="text" id="in2" name="in2" required>
+            
+            <br><br>
+
+            <h1>Question 2</h1>
+            <label for="Input">Input</label>
+            <input type="text" id="n1" name="n1" required>
+            <br><br>
+
+            <h1>Question 3</h1>
+            <label for="Number">Number</label>
+            <input type="text" name="number" required>
+            <br><br>
+
+            <label for="Name">Name: </label>
+            <input type="text" name="name" required>
+            <br><br>
+            <label for="Country">Country</label>
+            <input type="text" name="country" required>
+            <br><br>
+        </div>
+        <div class="form-column">
+            <label for="City">City</label>
+            <input type="text" name="city" required>
+            <br><br>
+            <label for="Date">Date</label>
+            <input type="date" name="date" required>
+            <br><br>
+
+            <h1>Question 4</h1>
+            <label for="Marks">MARKS</label>
+            <input type="number" name="marks" required>
+            <br><br>
+
+            <h1>Question 5</h1>
+            <label for="Number 1">Number 1</label>
+            <input type="text" name="number1" required>
+            <br><br>            
+            <label for="Number 2">Number 2</label>
+            <input type="text" name="number2" required>
+            <br><br>
+            <label for="Number3">Number 3</label>
+            <input type="text" name="number3" required>
+            <br><br>
+            <input type="submit" value="Submit">
+
+        </div>
+    </form>
+
+</body>
+</html>

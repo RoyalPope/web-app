@@ -1,3 +1,3 @@
 <?php
-$xonn = mysqli_connect('localhost','Pope','earth3','juice_depot');
+$xonn = mysqli_connect('localhost','root','','juice_depot');
 ?>
